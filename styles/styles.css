@@ -1,0 +1,208 @@
+/* font-family: 'Roboto', sans-serif;
+font-family: 'ABeeZee', sans-serif; */
+:root {
+  --main-color: salmon;
+  --secondary-color: #f368e0;
+  --secondary-hover-color: #ff9ff3;
+  --main-font: 'Roboto', sans-serif;
+  --accent-font: 'ABeeZee', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: var(--accent-font);
+  position: relative;
+}
+
+h2 { font-weight: 300; }
+
+h3 {
+  font-size: 3rem;
+  font-family: var(--accent-font);
+  text-align: center;
+}
+
+h4 {
+  font-family: var(--accent-font);
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h5 {
+  font-family: var(--accent-font);
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: var(--secondary-color);
+  color: white;
+  transition: 0.3s all;
+}
+
+.button:hover {
+  background: var(--secondary-hover-color);
+  transform: translateY(-10%);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: 0.3s all;
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+}
+
+a:hover {
+  color: var(--secondary-hover-color);
+}
+
+a:hover:before {
+  content: "";
+  background: url('../assets/ears.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 50px;
+  width: 50px;
+  height: 20px;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-55%);
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%
+}
+
+section {
+  margin: 100px 0;
+}
+
+/* header styles */
+header {
+  background: rgb(185,77,233);
+  background: linear-gradient(-45deg, rgb(208, 99, 255) 0%, rgb(29, 126, 237) 100%);
+  color: white;
+  padding: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+header .title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.ears {
+  position: relative;
+}
+
+.ears:before {
+  content: "";
+  background: url('../assets/ears.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 100px;
+  width: 100px;
+  height: 80px;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* detailed styles */
+.steps p {
+  font-weight: 300;
+}
+
+.steps ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.steps a {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.task {
+  border: 3px solid #7974F6;
+  width: 30%;
+  min-width: 230px;
+  padding: 20px;
+  transition: 0.3s all;
+  margin: 20px 0;
+    background: #A16DFA;
+  background: linear-gradient(-45deg, #A16DFA 0%, rgb(29, 126, 237) 100%);
+  color: white;
+}
+
+.task:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 10px #999;
+}
+
+.task p {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.task ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  list-style-position: inside;
+}
