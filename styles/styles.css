@@ -55,21 +55,26 @@ ul {
 .button {
   border: none;
   border-radius: 50px;
-  padding: 10px 15px;
+  padding: 10px 15px 8px;
   margin: 20px;
   cursor: pointer;
   font-family: var(--accent-font);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  background: var(--secondary-color);
-  color: white;
+  border: 2px solid black;
   transition: 0.3s all;
+  background: white;
+  color: black;
 }
 
 .button:hover {
-  background: var(--secondary-hover-color);
+  background: black;
   transform: translateY(-10%);
   color: white;
+}
+
+.button:hover:before {
+   background: none;
 }
 
 a {
@@ -81,10 +86,6 @@ a {
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-}
-
-a:hover {
-  color: var(--secondary-hover-color);
 }
 
 a:hover:before {
@@ -118,14 +119,21 @@ section {
 
 /* header styles */
 header {
-  background: rgb(185,77,233);
-  background: linear-gradient(-45deg, rgb(208, 99, 255) 0%, rgb(29, 126, 237) 100%);
-  color: white;
   padding: 50px 0;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   text-align: center;
-  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-around;
+}
+
+nav {
+  width: 100%;
 }
 
 header ul {
@@ -134,13 +142,16 @@ header ul {
   justify-content: space-evenly;
 }
 
+.header-img {
+  width: 50%;
+  background-image: url(../assets/aria.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header .title {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-60%);
-  left: 0;
-  right: 0;
-  padding: 20px;
+  width: 50%;
+  padding: 25px;
 }
 
 .ears {
@@ -169,24 +180,33 @@ header .title {
 .steps ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .steps a {
   display: block;
-  width: 100px;
+  width: 150px;
   margin: 0 auto;
+  text-align: center;
+  border-color: white;
+}
+
+.note {
+  background: white;
+  color: black;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
 }
 
 .task {
-  border: 3px solid #7974F6;
   width: 30%;
   min-width: 230px;
   padding: 20px;
   transition: 0.3s all;
-  margin: 20px 0;
-    background: #A16DFA;
-  background: linear-gradient(-45deg, #A16DFA 0%, rgb(29, 126, 237) 100%);
+  margin: 20px;
+  background: black;
   color: white;
 }
 
@@ -205,4 +225,25 @@ header .title {
   flex-direction: column;
   list-style-type: disc;
   list-style-position: inside;
+}
+
+
+.contact-box {
+  border: 1px solid black;
+  width: calc(100% / 3 - 40px);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  min-width: 230px;
+}
+
+.contact-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 10px #999;
+}
+
+h6 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
